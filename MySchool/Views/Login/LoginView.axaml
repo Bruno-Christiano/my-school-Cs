@@ -1,0 +1,67 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModelLogin="clr-namespace:MySchool.ViewModels.Login"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MySchool.Views.Login.LoginView"
+        x:DataType="viewModelLogin:LoginViewModel"
+        Title="Login"
+        Width="1000"
+        Height="800">
+
+    <Window.DataContext>
+        <viewModelLogin:LoginViewModel /> <!-- Substitua 'local' pelo namespace onde está sua LoginViewModel -->
+    </Window.DataContext>
+
+    <Grid
+        VerticalAlignment="Center"
+        Width="400"
+        Height="300">
+        <StackPanel Margin="20">
+            <Border Margin="5"
+                    CornerRadius="10">
+                <TextBlock Margin="5"
+                           FontSize="24"
+                           HorizontalAlignment="Center"
+                           Text="Login">
+                </TextBlock>
+            </Border>
+
+
+            <StackPanel Margin="0 12 0 0">
+                <Label>Usuário</Label>
+                <TextBox
+                    Text="{Binding UserName}"
+                    Watermark="Informe seu usuário">
+                </TextBox>
+
+                <StackPanel Margin="0 12 0 0">
+                    <Label>Senha</Label>
+                    <TextBox 
+                        PasswordChar="*" 
+                        Watermark="Informe a senha"
+                        Text="{Binding Password}"
+                        >
+                        
+                    </TextBox>
+                </StackPanel>
+
+                <Button
+                    HorizontalContentAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 16 0 0 "
+                    Width="100"
+                    Background="#689BA6"
+                    Command="{Binding LoginCommand}"
+                    >
+                    Entrar
+                </Button>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
