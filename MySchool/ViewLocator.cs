@@ -3,6 +3,8 @@ using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using MySchool.ViewModels;
 
+using MySchool.Views.Login;
+
 namespace MySchool;
 
 public class ViewLocator : IDataTemplate
@@ -22,6 +24,6 @@ public class ViewLocator : IDataTemplate
 
     public bool Match(object data)
     {
-        return data is ViewModelBase;
+        return data is LoginView;
     }
 }

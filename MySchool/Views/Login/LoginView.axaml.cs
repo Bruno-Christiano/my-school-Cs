@@ -10,13 +10,13 @@ public partial class LoginView : Window
 {
     public LoginView()
     {
-        InitializeComponent();
-        this.DataContext = new LoginViewModel();
+         InitializeComponent();
+        // this.DataContext = new LoginViewModel();
     }
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
-    }
+    // private void InitializeComponent()
+    // {
+    //     AvaloniaXamlLoader.Load(this);
+    // }
 
   
 }
