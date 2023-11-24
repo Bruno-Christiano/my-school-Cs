@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[11.0.2, )"
             },
+            "Avalonia.FuncUI": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Avalonia.ReactiveUI": {
               "target": "Package",
               "version": "[11.0.2, )"
@@ -61,6 +65,14 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.2, )"
+            },
+            "CustomMessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[11.0.0.2, )"
+            },
+            "MessageBoxSlim.Avalonia": {
+              "target": "Package",
+              "version": "[0.9.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -91,6 +103,18 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
             },
             "System.Windows.Extensions": {
               "target": "Package",

@@ -9,6 +9,7 @@
 /home/brunosantos/.nuget/packages/avalonia/11.0.2/ref/net6.0/Avalonia.dll
 /home/brunosantos/.nuget/packages/avalonia.fonts.inter/11.0.2/lib/net6.0/Avalonia.Fonts.Inter.dll
 /home/brunosantos/.nuget/packages/avalonia.freedesktop/11.0.2/lib/net6.0/Avalonia.FreeDesktop.dll
+/home/brunosantos/.nuget/packages/avalonia.funcui/1.1.0/lib/net6.0/Avalonia.FuncUI.dll
 /home/brunosantos/.nuget/packages/avalonia/11.0.2/ref/net6.0/Avalonia.Markup.dll
 /home/brunosantos/.nuget/packages/avalonia/11.0.2/ref/net6.0/Avalonia.Markup.Xaml.dll
 /home/brunosantos/.nuget/packages/avalonia/11.0.2/ref/net6.0/Avalonia.Metal.dll
@@ -24,8 +25,11 @@
 /home/brunosantos/.nuget/packages/avalonia.x11/11.0.2/lib/net6.0/Avalonia.X11.dll
 /home/brunosantos/.nuget/packages/azure.core/1.24.0/lib/net5.0/Azure.Core.dll
 /home/brunosantos/.nuget/packages/azure.identity/1.6.0/lib/netstandard2.0/Azure.Identity.dll
+/home/brunosantos/.nuget/packages/custommessagebox.avalonia/11.0.0.2/lib/netcoreapp3.0/CustomMessageBox.Avalonia.dll
 /home/brunosantos/.nuget/packages/dynamicdata/7.9.5/lib/net6.0/DynamicData.dll
+/home/brunosantos/.nuget/packages/fsharp.core/7.0.400/lib/netstandard2.1/FSharp.Core.dll
 /home/brunosantos/.nuget/packages/harfbuzzsharp/2.8.2.3/lib/net6.0/HarfBuzzSharp.dll
+/home/brunosantos/.nuget/packages/messageboxslim.avalonia/0.9.8/lib/netstandard2.0/MessageBoxSlim.Avalonia.dll
 /home/brunosantos/.nuget/packages/microcom.runtime/0.11.0/lib/net5.0/MicroCom.Runtime.dll
 /home/brunosantos/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll
 /home/brunosantos/.nuget/packages/microsoft.codeanalysis.csharp/3.8.0/lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll
@@ -157,7 +161,7 @@
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.Numerics.dll
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.Numerics.Vectors.dll
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.ObjectModel.dll
-/home/brunosantos/.nuget/packages/system.reactive/5.0.0/lib/net5.0/System.Reactive.dll
+/home/brunosantos/.nuget/packages/system.reactive/6.0.0/lib/net6.0/System.Reactive.dll
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.Reflection.DispatchProxy.dll
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.Reflection.dll
 /usr/lib/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.14/ref/net7.0/System.Reflection.Emit.dll

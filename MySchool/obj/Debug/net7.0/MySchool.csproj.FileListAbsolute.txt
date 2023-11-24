@@ -19,6 +19,7 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Diagnostics.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Fonts.Inter.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.FreeDesktop.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.FuncUI.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Native.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.ReactiveUI.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Remote.Protocol.dll
@@ -30,7 +31,10 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Azure.Core.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Azure.Identity.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/DynamicData.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/FSharp.Core.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/HarfBuzzSharp.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Humanizer.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/MessageBoxSlim.Avalonia.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/MicroCom.Runtime.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.CodeAnalysis.dll
@@ -40,6 +44,7 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.Caching.Abstractions.dll
@@ -50,6 +55,7 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Json.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Physical.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.FileSystemGlobbing.dll
@@ -67,10 +73,12 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Mono.TextTemplating.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Newtonsoft.Json.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/ReactiveUI.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/SkiaSharp.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Splat.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.CodeDom.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.Drawing.Common.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
@@ -82,6 +90,19 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.Security.Permissions.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.Windows.Extensions.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Tmds.DBus.Protocol.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/cs/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/de/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/es/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/fr/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/it/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/ja/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/ko/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/pl/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/pt-BR/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/ru/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/tr/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/zh-Hans/FSharp.Core.resources.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/zh-Hant/FSharp.Core.resources.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/cs/Microsoft.CodeAnalysis.resources.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/de/Microsoft.CodeAnalysis.resources.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -182,8 +203,4 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.CopyComplete
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.genruntimeconfig.cache
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/ref/MySchool.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Humanizer.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Mono.TextTemplating.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/System.CodeDom.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/CustomMessageBox.Avalonia.dll

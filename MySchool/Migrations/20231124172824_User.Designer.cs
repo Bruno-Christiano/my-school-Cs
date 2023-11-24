@@ -11,7 +11,7 @@ using MySchool.Data;
 namespace MySchool.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231123214049_User")]
+    [Migration("20231124172824_User")]
     partial class User
     {
         /// <inheritdoc />
@@ -33,10 +33,13 @@ namespace MySchool.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

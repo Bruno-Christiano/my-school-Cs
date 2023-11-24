@@ -4,8 +4,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MySchool.Views.Home.HomeView"
+        xmlns:viewModelHome="clr-namespace:MySchool.ViewModels.HomeViewModel"
+        x:DataType="viewModelHome:HomeViewModel"
         Width="1000"
         Height="800"
         Title="HomeView">
-  Home vieww!
+
+    <Window.DataContext>
+        <viewModelHome:HomeViewModel /> <!-- Substitua 'local' pelo namespace onde está sua LoginViewModel -->
+    </Window.DataContext>
+
+    <TextBlock
+        Text="{Binding Auth.UserName, StringFormat=Bem-Vindo {0} LINDO}">
+
+    </TextBlock>
 </Window>

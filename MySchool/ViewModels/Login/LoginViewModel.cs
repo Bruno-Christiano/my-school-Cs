@@ -1,20 +1,28 @@
+using System;
 using System.Diagnostics;
 using System.Windows.Input;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Layout;
+using MySchool.Data;
 using MySchool.Models.Auth;
+using MySchool.Services.Auth;
 using MySchool.Views;
 using MySchool.Views.Home;
 using Newtonsoft.Json;
 using ReactiveUI;
 
+using CustomMessageBox.Avalonia;
+
+
 namespace MySchool.ViewModels.Login;
+
+using Avalonia.Interactivity;
 
 public class LoginViewModel : ReactiveObject
 {
-    private Auth _auth;
-
+    public Auth _auth;
 
     public ICommand LoginCommand { get; }
 
@@ -25,6 +33,7 @@ public class LoginViewModel : ReactiveObject
         _auth = new Auth();
         LoginCommand = new RelayCommand(() => Login(_auth));
     }
+    
 
     public string UserName
     {
@@ -57,20 +66,44 @@ public class LoginViewModel : ReactiveObject
     }
 
 
-    private void GoToHomePage()
+    private static void GoToHomePage(Auth auth)
     {
-        var homeView = new HomeView();
+        var homeViewModel = new HomeViewModel.HomeViewModel
+            { Auth = auth };
+        var homeView = new HomeView { DataContext = homeViewModel };
         homeView.Show();
         CloseLogin();
     }
 
 
-    private void Login(Auth auth)
+    private static void Login(Auth auth)
     {
-        string json = JsonConvert.SerializeObject(auth);
-        
-        Debug.WriteLine(json);
-        /*GoToHomePage();*/
+        using (var dbContext = new ApplicationDbContext())
+
+        {
+            var authService = new AuthService(dbContext);
+
+            string userName = auth.UserName;
+            string password = auth.Password;
+
+            if (authService.AuthenticateUser(userName, password))
+            {
+                GoToHomePage(auth);
+            }
+            else
+            {
+                var messageBox = new MessageBox(
+                    "Usuário inválido",
+                    "Acesso negado", MessageBoxIcon.Error)
+                {
+                    HorizontalButtonsPanelAlignment = HorizontalAlignment.Center
+                };
+                
+                var result = messageBox.Show(
+                    new MessageBoxButton<MessageBoxResult>("Fechar",
+                        MessageBoxResult.Yes, SpecialButtonRole.IsDefault));
+            }
+        }
     }
 
 
