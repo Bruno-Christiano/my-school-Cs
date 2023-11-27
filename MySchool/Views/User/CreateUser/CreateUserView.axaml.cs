@@ -3,25 +3,21 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using MySchool.Models.Auth;
-using MySchool.ViewModels.HomeViewModel;
 using MySchool.ViewModels.UserViewModel;
-using MySchool.Views.User.CreateUser;
 
-namespace MySchool.Views.Home;
+namespace MySchool.Views.User.CreateUser;
 
-public partial class HomeView : Window
+public partial class CreateUserView : Window
 {
-    public HomeView()
+    public CreateUserView()
     {
         InitializeComponent();
-        DataContext = new HomeViewModel();
-
+        DataContext = new UserViewModel();
+        
     }
     private void InitializeComponent()
     {
         AvaloniaXamlLoader.Load(this);
     }
 
-   
 }

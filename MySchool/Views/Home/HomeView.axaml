@@ -14,8 +14,30 @@
         <viewModelHome:HomeViewModel /> <!-- Substitua 'local' pelo namespace onde está sua LoginViewModel -->
     </Window.DataContext>
 
-    <TextBlock
-        Text="{Binding Auth.UserName, StringFormat=Bem-Vindo {0} LINDO}">
-
-    </TextBlock>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+           
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DockPanel >
+            <Menu VerticalAlignment="Top">
+                <MenuItem Header="_Arquivos">
+                    <MenuItem Header="_Alguma coisa"/>
+                    <MenuItem Header="_Alguma coisa"/>
+                    <Separator></Separator>
+                    <MenuItem Header="_Sair"/>
+                </MenuItem>
+                <MenuItem Header="_Usuário">
+                    <MenuItem Header="_Registrar" Command="{Binding OpenWindowUserCommand}"/>
+                    <MenuItem Header="_Lista de Usuários"/>
+                </MenuItem>
+               
+            </Menu>
+        </DockPanel>
+    
+  
+    </Grid>
 </Window>

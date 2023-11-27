@@ -1,0 +1,96 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MySchool.Views.User.CreateUser.CreateUserView"
+        xmlns:viewModelUser="clr-namespace:MySchool.ViewModels.UserViewModel"
+        x:DataType="viewModelUser:UserViewModel"
+        >
+    
+    <Window.DataContext>
+        <viewModelUser:UserViewModel></viewModelUser:UserViewModel>
+    </Window.DataContext>
+
+    <Grid HorizontalAlignment="Left">
+
+        <StackPanel Width="500">
+            <StackPanel Margin="20">
+                <Border Margin="5"
+                        CornerRadius="10">
+                    <TextBlock
+                        FontSize="24"
+                        Text="Cadastro de Usuários"
+                        >
+                    </TextBlock>
+                </Border>
+
+
+                <StackPanel Margin="0 12 0 0">
+                    <Label>Nome do usuário</Label>
+                    <TextBox
+                        Text="{Binding User.UserName}"
+                        Watermark="Informe seu usuário">
+                    </TextBox>
+
+                    <StackPanel Margin="0 12 0 0">
+                        <Label>Email</Label>
+                        <TextBox
+                            Watermark="Informe a senha"
+                            Text="{Binding User.Email}"
+                            >
+                        </TextBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="0 12 0 0">
+                        <Label>Função</Label>
+                        <ComboBox 
+                            SelectedIndex="0" 
+                            Width="200" 
+                            SelectedValue="{Binding User.Role}"
+                            ItemsSource="{Binding Roles}"
+                          >
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel 
+                        Margin="0 12 0 0">
+                        <Label>Senha</Label>
+                        <TextBox
+                            PasswordChar="*"
+                            Watermark="Informe a senha"
+                            Text="{Binding User.Password}"
+                            >
+
+                        </TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button
+                            Margin="0 16 16 0 "
+                            Width="100"
+                            HorizontalContentAlignment="Center"
+                            Background="#ecf0f1"
+                            >
+                            Cancelar
+                        </Button>
+                        <Button
+                            Margin="0 16 0 0 "
+                            Width="100"
+                            HorizontalContentAlignment="Center"
+                            Background="#2980b9"
+                            Command="{Binding RegisterUserCommand}"
+                            >
+                            Cadastrar
+                        </Button>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

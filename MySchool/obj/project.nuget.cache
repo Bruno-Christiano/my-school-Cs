@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xGtQpWr3QdfXciTuRN/Z2oc3iqZRpe/hrZrpSHV7vAsOuikjDhgrzE1M2lwioZ20rxkLUE91+ilqTGT2rh2gEg==",
+  "dgSpecHash": "DXjV5/xQ1NvQEMKZIcmBiPJDOTzJ/iHAHmhIoMW8GVMhsDvu7otpfvIEh/f5zThKCe2EoN5zCsKifsm/BbK+jw==",
   "success": true,
   "projectFilePath": "/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/MySchool.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,9 @@
     "/home/brunosantos/.nuget/packages/avalonia.x11/11.0.2/avalonia.x11.11.0.2.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/home/brunosantos/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/custommessagebox.avalonia/11.0.0.2/custommessagebox.avalonia.11.0.0.2.nupkg.sha512",
+    "/home/brunosantos/.nuget/packages/dialoghost.avalonia/0.7.7/dialoghost.avalonia.0.7.7.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/dynamicdata/7.9.5/dynamicdata.7.9.5.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/fsharp.core/7.0.400/fsharp.core.7.0.400.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/harfbuzzsharp/2.8.2.3/harfbuzzsharp.2.8.2.3.nupkg.sha512",

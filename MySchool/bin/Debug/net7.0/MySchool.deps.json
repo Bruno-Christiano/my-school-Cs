@@ -15,7 +15,9 @@
           "Avalonia.FuncUI": "1.1.0",
           "Avalonia.ReactiveUI": "11.0.2",
           "Avalonia.Themes.Fluent": "11.0.2",
+          "BCrypt.Net-Next": "4.0.3",
           "CustomMessageBox.Avalonia": "11.0.0.2",
+          "DialogHost.Avalonia": "0.7.7",
           "MessageBoxSlim.Avalonia": "0.9.8",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
@@ -333,6 +335,14 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "CustomMessageBox.Avalonia/11.0.0.2": {
         "dependencies": {
           "Avalonia": "11.0.2"
@@ -341,6 +351,18 @@
           "lib/netcoreapp3.0/CustomMessageBox.Avalonia.dll": {
             "assemblyVersion": "11.0.0.2",
             "fileVersion": "11.0.0.2"
+          }
+        }
+      },
+      "DialogHost.Avalonia/0.7.7": {
+        "dependencies": {
+          "Avalonia": "11.0.2",
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DialogHost.Avalonia.dll": {
+            "assemblyVersion": "0.7.7.0",
+            "fileVersion": "0.7.7.0"
           }
         }
       },
@@ -1665,12 +1687,26 @@
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
     },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
     "CustomMessageBox.Avalonia/11.0.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-yXgJs09YkjxGZKqPq6r0TmEJJXfinFQbtHVJGG9vExI9VDJkYfy9m+1auOpCkx1Ci7bz7ZUzJlyaydu23d6Mhw==",
       "path": "custommessagebox.avalonia/11.0.0.2",
       "hashPath": "custommessagebox.avalonia.11.0.0.2.nupkg.sha512"
+    },
+    "DialogHost.Avalonia/0.7.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V5zq0e6dBeK1A8xDsyNouzfSx3d+aOhxPgjguaFyaDexgDF8WiSQDsawkv0fRGKbDnaPIqMk9m7P/2G5c7HPzw==",
+      "path": "dialoghost.avalonia/0.7.7",
+      "hashPath": "dialoghost.avalonia.0.7.7.nupkg.sha512"
     },
     "DynamicData/7.9.5": {
       "type": "package",

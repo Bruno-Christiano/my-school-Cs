@@ -25,7 +25,20 @@ public class LoginViewModel : ReactiveObject
     public Auth _auth;
 
     public ICommand LoginCommand { get; }
+    private bool _isLoading;
 
+    public bool IsLoading
+    {
+        get => _isLoading;
+        set
+        {
+            if (_isLoading != value)
+            {
+                _isLoading = value;
+               this.RaisePropertyChanged(nameof(IsLoading));
+            }
+        }
+    }
     private string? _userName;
 
     public LoginViewModel()
@@ -49,7 +62,6 @@ public class LoginViewModel : ReactiveObject
     }
 
     private string? _password;
-
     public string Password
     {
         get => _auth.Password;
@@ -76,9 +88,10 @@ public class LoginViewModel : ReactiveObject
     }
 
 
-    private static void Login(Auth auth)
+    private void Login(Auth auth)
     {
-        using (var dbContext = new ApplicationDbContext())
+        IsLoading = true;
+        using var dbContext = new ApplicationDbContext();
 
         {
             var authService = new AuthService(dbContext);
@@ -88,10 +101,12 @@ public class LoginViewModel : ReactiveObject
 
             if (authService.AuthenticateUser(userName, password))
             {
+                IsLoading = false;
                 GoToHomePage(auth);
             }
             else
             {
+             
                 var messageBox = new MessageBox(
                     "Usuário inválido",
                     "Acesso negado", MessageBoxIcon.Error)
@@ -102,6 +117,7 @@ public class LoginViewModel : ReactiveObject
                 var result = messageBox.Show(
                     new MessageBoxButton<MessageBoxResult>("Fechar",
                         MessageBoxResult.Yes, SpecialButtonRole.IsDefault));
+
             }
         }
     }

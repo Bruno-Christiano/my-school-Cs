@@ -23,3 +23,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/brunosantos/Documentos/_studys/Alura/c\#/apps/my-school/MySchool/Views/Login/LoginView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/brunosantos/Documentos/_studys/Alura/c\#/apps/my-school/MySchool/Views/User/CreateUser/CreateUserView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
