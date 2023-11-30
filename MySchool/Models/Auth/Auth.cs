@@ -7,4 +7,8 @@ public class Auth
     public int Id { get; set; }
     public string UserName { get; set; }
     public string Password { get; set; }
+    
+    public string UserNameError { get; set; }
+    public string PasswordError { get; set; }
+    
 }

@@ -7,7 +7,7 @@ using MySchool.ViewModels.UserViewModel;
 
 namespace MySchool.Views.User.CreateUser;
 
-public partial class CreateUserView : Window
+public partial class CreateUserView : UserControl
 {
     public CreateUserView()
     {

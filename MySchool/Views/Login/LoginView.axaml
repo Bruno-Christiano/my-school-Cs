@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModelLogin="clr-namespace:MySchool.ViewModels.Login"
+        xmlns:conversor="clr-namespace:MySchool"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="MySchool.Views.Login.LoginView"
         x:DataType="viewModelLogin:LoginViewModel"
@@ -13,6 +14,13 @@
     <Window.DataContext>
         <viewModelLogin:LoginViewModel /> <!-- Substitua 'local' pelo namespace onde está sua LoginViewModel -->
     </Window.DataContext>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <conversor:BoolToClassConverter x:Key="BoolToClassConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+
 
     <Grid
         VerticalAlignment="Center"
@@ -28,22 +36,42 @@
                 </TextBlock>
             </Border>
 
-
             <StackPanel Margin="0 12 0 0">
                 <Label>Usuário</Label>
                 <TextBox
                     Text="{Binding UserName}"
-                    Watermark="Informe seu usuário">
+                    Watermark="Informe seu usuário"
+                    >
+                    <!--<TextBox.Styles>
+                        <Style Selector="TextBox">
+                            <Setter 
+                                Property="TextBox.Background" 
+                                Value="{Binding LoginValidator, 
+                                Converter={StaticResource BoolToClassConverter}}
+                                "
+                           />
+                        </Style>
+                    </TextBox.Styles>-->
+                    
                 </TextBox>
+                <TextBlock Text="{Binding UserNameError}" ></TextBlock>
 
                 <StackPanel Margin="0 12 0 0">
                     <Label>Senha</Label>
-                    <TextBox
-                        PasswordChar="*"
-                        Watermark="Informe a senha"
-                        Text="{Binding Password}">
 
-                    </TextBox>
+                    <Grid Margin="0 0 0 0">
+                        <TextBox
+                            Text="{Binding Password, Mode=TwoWay}"
+                            Watermark="Informe a senha"
+                            PasswordChar="*" />
+                        <TextBlock Text="{Binding UserNameError}" ></TextBlock>
+                        <!--<Button
+                            HorizontalAlignment="Right"
+                            Background="Transparent">
+                            <Image Name="EyeIcon" Source="../../Assets/eye.png" Width="16" Height="16" />
+                        </Button>-->
+                    </Grid>
+
                 </StackPanel>
 
                 <Button
@@ -59,11 +87,14 @@
             </StackPanel>
 
         </StackPanel>
-        <!-- Controle de Carregamento -->
-        <Border x:Name="LoadingIndicator" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" IsVisible="{Binding IsLoading}">
-            <!-- Adicione aqui o controle visual que representa o indicador de carregamento (por exemplo, uma animação ou uma imagem) -->
+        <!--~1~ Controle de Carregamento @1@
+        <Border x:Name="LoadingIndicator" Background="Transparent" HorizontalAlignment="Center"
+                VerticalAlignment="Center" IsVisible="{Binding IsLoading}">
+            ~1~ Adicione aqui o controle visual que representa o indicador de carregamento (por exemplo, uma animação ou uma imagem) @1@
             <TextBlock Text="Loading..."></TextBlock>
-        </Border>
+        </Border>-->
+
+
     </Grid>
 
 </Window>

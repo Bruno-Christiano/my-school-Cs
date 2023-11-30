@@ -29,18 +29,11 @@ public class AuthService
 
         return false;
         
-        
-        // Retornar true se o usuário foi encontrado, senão false
-        var listUser = JsonConvert.SerializeObject(_dbContext.Users);
-        Console.WriteLine($"lista de dados db {listUser}");
-        return user != null;
-      
     }
-    
-    // Método para verificar a senha durante o login
+ 
     public bool VerifyPassword(string enteredPassword, string hashedPasswordFromDatabase)
     {
-        // Use BCrypt para verificar se a senha inserida corresponde à senha armazenada
+       
         return BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPasswordFromDatabase);
     }
 }

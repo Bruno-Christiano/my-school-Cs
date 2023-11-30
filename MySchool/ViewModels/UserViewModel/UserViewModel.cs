@@ -7,7 +7,7 @@ using CustomMessageBox.Avalonia;
 using MySchool.Data;
 using MySchool.Models.User;
 using MySchool.Services.User;
-using Newtonsoft.Json;
+
 using ReactiveUI;
 
 namespace MySchool.ViewModels.UserViewModel;

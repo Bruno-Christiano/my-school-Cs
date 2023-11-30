@@ -10,11 +10,11 @@
         Height="800"
         Title="HomeView">
 
-    <Window.DataContext>
-        <viewModelHome:HomeViewModel /> <!-- Substitua 'local' pelo namespace onde está sua LoginViewModel -->
-    </Window.DataContext>
+    <!--<Window.DataContext>
+        <viewModelHome:HomeViewModel /> ~1~ Substitua 'local' pelo namespace onde está sua LoginViewModel @1@
+    </Window.DataContext>-->
 
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="True" > 
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
            
@@ -37,7 +37,11 @@
                
             </Menu>
         </DockPanel>
-    
+        
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ContentControl Content="{Binding CreateUserView}" ></ContentControl>
+        </Grid>
+
   
     </Grid>
 </Window>

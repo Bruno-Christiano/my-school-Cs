@@ -18,7 +18,8 @@ public class HomeViewModel : ReactiveObject
   
     public ICommand OpenWindowUserCommand { get; }
     
-
+    private UserControl _createUserView;
+    
     public HomeViewModel()
     {
         OpenWindowUserCommand =
@@ -39,13 +40,17 @@ public class HomeViewModel : ReactiveObject
         }
     }
     
+    
+    public UserControl CreateUserView
+    {
+        get => _createUserView;
+        set => this.RaiseAndSetIfChanged(ref _createUserView, value);
+    }
 
     public void OpenWindowRegisterUser()
     {
-        /*var userViewModel = new UserViewModel.UserViewModel();*/
-        var userView = new CreateUserView();
-        userView.Show();
-      
+        var userRegistrationView = new CreateUserView(); // Substitua esta linha com sua lógica de criação do UserRegistrationView
+        CreateUserView = userRegistrationView;
         
     }
 

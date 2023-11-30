@@ -5,6 +5,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Layout;
+using Avalonia.Media;
 using MySchool.Data;
 using MySchool.Models.Auth;
 using MySchool.Services.Auth;
@@ -12,8 +13,10 @@ using MySchool.Views;
 using MySchool.Views.Home;
 using Newtonsoft.Json;
 using ReactiveUI;
-
 using CustomMessageBox.Avalonia;
+using FluentValidation.Results;
+using MySchool.Models.User;
+using MySchool.Resources.Shared.Validators;
 
 
 namespace MySchool.ViewModels.Login;
@@ -23,30 +26,21 @@ using Avalonia.Interactivity;
 public class LoginViewModel : ReactiveObject
 {
     public Auth _auth;
-
+    private LoginValidator _loginValidator;
     public ICommand LoginCommand { get; }
-    private bool _isLoading;
-
-    public bool IsLoading
-    {
-        get => _isLoading;
-        set
-        {
-            if (_isLoading != value)
-            {
-                _isLoading = value;
-               this.RaisePropertyChanged(nameof(IsLoading));
-            }
-        }
-    }
-    private string? _userName;
+    
 
     public LoginViewModel()
     {
         _auth = new Auth();
         LoginCommand = new RelayCommand(() => Login(_auth));
+        _loginValidator = new LoginValidator();
     }
-    
+
+   
+
+    private string? _userName;
+
 
     public string UserName
     {
@@ -56,12 +50,14 @@ public class LoginViewModel : ReactiveObject
             if (_auth.UserName != value)
             {
                 _auth.UserName = value;
+                ValidateForm("UserName");
                 this.RaisePropertyChanged(nameof(UserName));
             }
         }
     }
 
     private string? _password;
+
     public string Password
     {
         get => _auth.Password;
@@ -71,6 +67,7 @@ public class LoginViewModel : ReactiveObject
                 if (_auth.Password != value)
                 {
                     _auth.Password = value;
+                    /*ValidateForm("password");*/
                     this.RaisePropertyChanged(nameof(Password));
                 }
             }
@@ -87,10 +84,28 @@ public class LoginViewModel : ReactiveObject
         CloseLogin();
     }
 
-
     private void Login(Auth auth)
     {
-        IsLoading = true;
+        /*// Validar o modelo User usando o validador
+        var userValidator = new LoginValidator();
+        var validationResult = userValidator.Validate(new Auth()
+            { UserName = auth.UserName, Password = auth.Password });*/
+        /*var loginValidator = new LoginValidator();
+        ValidationResult = loginValidator.Validate(auth);
+
+        // Verificar se a validação falhou'
+        if (!ValidationResult.IsValid)
+        {
+            // Manipular os erros de validação conforme necessário
+            foreach (var error in ValidationResult.Errors)
+            {
+                Debug.WriteLine($"Validation error: {error.ErrorMessage}");
+            }
+
+            return;
+        }*/
+
+
         using var dbContext = new ApplicationDbContext();
 
         {
@@ -101,23 +116,21 @@ public class LoginViewModel : ReactiveObject
 
             if (authService.AuthenticateUser(userName, password))
             {
-                IsLoading = false;
+             
                 GoToHomePage(auth);
             }
             else
             {
-             
                 var messageBox = new MessageBox(
                     "Usuário inválido",
                     "Acesso negado", MessageBoxIcon.Error)
                 {
                     HorizontalButtonsPanelAlignment = HorizontalAlignment.Center
                 };
-                
+
                 var result = messageBox.Show(
                     new MessageBoxButton<MessageBoxResult>("Fechar",
                         MessageBoxResult.Yes, SpecialButtonRole.IsDefault));
-
             }
         }
     }
@@ -127,5 +140,45 @@ public class LoginViewModel : ReactiveObject
     {
         (Application.Current.ApplicationLifetime as
             IClassicDesktopStyleApplicationLifetime)?.MainWindow?.Close();
+    }
+
+    public string UserNameError
+    {
+        get => _auth.UserNameError;
+        set
+        {
+            _auth.UserNameError = value;
+            this.RaisePropertyChanged(nameof(UserNameError));
+        }
+    }
+
+    public void ValidateForm(string? userName="UserName", string? password = "")
+    {
+        
+        // a validação do form acontece por qque vai ser chamdado a qualquer momento.
+        
+   var loginValidator = _loginValidator.Validate(new Auth { UserName = UserName, Password = Password });
+   UserNameError =string.Empty;
+   
+        if (!loginValidator.IsValid)
+        {
+            foreach (var failure in loginValidator.Errors)
+            {
+
+                if (failure.PropertyName == userName)
+                {
+                    Console.WriteLine(failure.ErrorMessage);
+                    UserNameError = failure.ErrorMessage;
+                }
+                if (failure.PropertyName == password)
+                {
+                    Console.WriteLine(failure.ErrorMessage);
+                    UserNameError = failure.ErrorMessage;
+                }
+                /*Console.WriteLine($"Property: {failure.PropertyName}, Error: {failure.ErrorMessage}");*/
+            }
+        }
+        
+        
     }
 }

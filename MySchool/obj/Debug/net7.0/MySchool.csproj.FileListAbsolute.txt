@@ -1,10 +1,3 @@
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.AssemblyReference.cache
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/Resources.Inputs.cache
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/resources
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.GeneratedMSBuildEditorConfig.editorconfig
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.AssemblyInfoInputs.cache
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.AssemblyInfo.cs
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.CoreCompileInputs.cache
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/MySchool
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/MySchool.deps.json
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/MySchool.runtimeconfig.json
@@ -20,7 +13,6 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.MicroCom.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.OpenGL.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Controls.ColorPicker.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Controls.DataGrid.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Desktop.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Diagnostics.dll
@@ -32,14 +24,15 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Remote.Protocol.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Skia.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Themes.Fluent.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Themes.Simple.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.Win32.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Avalonia.X11.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Azure.Core.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Azure.Identity.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/CustomMessageBox.Avalonia.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/DialogHost.Avalonia.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/DynamicData.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/FluentValidation.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/FSharp.Core.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/HarfBuzzSharp.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/Humanizer.dll
@@ -195,6 +188,13 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.AssemblyReference.cache
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/Resources.Inputs.cache
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/resources
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.GeneratedMSBuildEditorConfig.editorconfig
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.AssemblyInfoInputs.cache
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.AssemblyInfo.cs
+/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.CoreCompileInputs.cache
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/references
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/original.dll
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/Avalonia/original.pdb
@@ -205,4 +205,3 @@
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.csproj.CopyComplete
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/MySchool.genruntimeconfig.cache
 /home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/obj/Debug/net7.0/ref/MySchool.dll
-/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/bin/Debug/net7.0/BCrypt.Net-Next.dll
