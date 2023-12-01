@@ -15,6 +15,7 @@
           "Avalonia.FuncUI": "1.1.0",
           "Avalonia.ReactiveUI": "11.0.2",
           "Avalonia.Themes.Fluent": "11.0.2",
+          "Avalonia.Xaml.Interactivity": "11.0.2",
           "BCrypt.Net-Next": "4.0.3",
           "CustomMessageBox.Avalonia": "11.0.0.2",
           "DialogHost.Avalonia": "0.7.7",
@@ -272,6 +273,17 @@
         },
         "runtime": {
           "lib/net6.0/Avalonia.X11.dll": {
+            "assemblyVersion": "11.0.2.0",
+            "fileVersion": "11.0.2.0"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactivity/11.0.2": {
+        "dependencies": {
+          "Avalonia": "11.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Xaml.Interactivity.dll": {
             "assemblyVersion": "11.0.2.0",
             "fileVersion": "11.0.2.0"
           }
@@ -1642,6 +1654,13 @@
       "sha512": "sha512-KU/5oNkw5/su5jZaYKaARn186STLM9m9kpxaCFVAFqBT+b9JYo+Q064TtcMnZspENA/fmVk44y62ENJRq1c0CQ==",
       "path": "avalonia.x11/11.0.2",
       "hashPath": "avalonia.x11.11.0.2.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactivity/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8uBANon/DMvm4ywXkKHWPWL59uj9u3753NbLx8nK0vXDOHnmlRgaXlhDG0/zlpGIgFkYhM6IgCP6q31kJxnWhQ==",
+      "path": "avalonia.xaml.interactivity/11.0.2",
+      "hashPath": "avalonia.xaml.interactivity.11.0.2.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",

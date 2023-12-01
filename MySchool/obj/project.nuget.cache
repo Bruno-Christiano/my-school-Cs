@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VpbYfzFmlyQJisNtJHkhM8fDW2IXnJCfdvJnavDuMSDq2jLzSzOr5viS1loNUbdr9NnL2+bIdhb3RfrBanEY9A==",
+  "dgSpecHash": "dZM0/7P8gZf89+/pXWq3wEM925rEE2uS8tPZn26hwwcDmfM2cxZiCRHy+w25kf3tY/sazg9om336oS+bQ4Jrew==",
   "success": true,
   "projectFilePath": "/home/brunosantos/Documentos/_studys/Alura/c#/apps/my-school/MySchool/MySchool.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/home/brunosantos/.nuget/packages/avalonia.themes.fluent/11.0.2/avalonia.themes.fluent.11.0.2.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/avalonia.win32/11.0.2/avalonia.win32.11.0.2.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/avalonia.x11/11.0.2/avalonia.x11.11.0.2.nupkg.sha512",
+    "/home/brunosantos/.nuget/packages/avalonia.xaml.interactivity/11.0.2/avalonia.xaml.interactivity.11.0.2.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/home/brunosantos/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",

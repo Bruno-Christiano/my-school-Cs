@@ -43,34 +43,33 @@
                     Watermark="Informe seu usuário"
                     >
                     <!--<TextBox.Styles>
-                        <Style Selector="TextBox">
+                        <Style Selector="TextBox" x:DataType="viewModelLogin:LoginViewModel">
                             <Setter 
-                                Property="TextBox.Background" 
-                                Value="{Binding LoginValidator, 
-                                Converter={StaticResource BoolToClassConverter}}
-                                "
+                                Property="TextBox.BorderBrush" 
+                          
                            />
                         </Style>
                     </TextBox.Styles>-->
                     
                 </TextBox>
-                <TextBlock Text="{Binding UserNameError}" ></TextBlock>
+                <TextBlock Foreground="Red" Text="{Binding UserNameError}" ></TextBlock>
 
                 <StackPanel Margin="0 12 0 0">
                     <Label>Senha</Label>
-
-                    <Grid Margin="0 0 0 0">
-                        <TextBox
-                            Text="{Binding Password, Mode=TwoWay}"
-                            Watermark="Informe a senha"
-                            PasswordChar="*" />
-                        <TextBlock Text="{Binding UserNameError}" ></TextBlock>
-                        <!--<Button
+                    <TextBox
+                        Text="{Binding Password}"
+                        Watermark="Informe a senha"
+                        PasswordChar="*" />
+                   
+                    <!--<Button
                             HorizontalAlignment="Right"
                             Background="Transparent">
                             <Image Name="EyeIcon" Source="../../Assets/eye.png" Width="16" Height="16" />
                         </Button>-->
-                    </Grid>
+                    <TextBlock Foreground="Red" Text="{Binding UserPasswordError}" ></TextBlock>
+                    <!--<Grid Margin="0 0 0 0">
+                        
+                    </Grid>-->
 
                 </StackPanel>
 

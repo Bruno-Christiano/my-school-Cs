@@ -9,6 +9,6 @@ public class Auth
     public string Password { get; set; }
     
     public string UserNameError { get; set; }
-    public string PasswordError { get; set; }
+    public string UserPasswordError { get; set; }
     
 }

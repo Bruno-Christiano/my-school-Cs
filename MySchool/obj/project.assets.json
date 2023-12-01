@@ -337,6 +337,22 @@
           }
         }
       },
+      "Avalonia.Xaml.Interactivity/11.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Avalonia.Xaml.Interactivity.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Avalonia.Xaml.Interactivity.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.24.0": {
         "type": "package",
         "dependencies": {
@@ -2738,6 +2754,25 @@
         "lib/net6.0/Avalonia.X11.xml",
         "lib/netstandard2.0/Avalonia.X11.dll",
         "lib/netstandard2.0/Avalonia.X11.xml"
+      ]
+    },
+    "Avalonia.Xaml.Interactivity/11.0.2": {
+      "sha512": "8uBANon/DMvm4ywXkKHWPWL59uj9u3753NbLx8nK0vXDOHnmlRgaXlhDG0/zlpGIgFkYhM6IgCP6q31kJxnWhQ==",
+      "type": "package",
+      "path": "avalonia.xaml.interactivity/11.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "avalonia.xaml.interactivity.11.0.2.nupkg.sha512",
+        "avalonia.xaml.interactivity.nuspec",
+        "lib/net461/Avalonia.Xaml.Interactivity.dll",
+        "lib/net461/Avalonia.Xaml.Interactivity.xml",
+        "lib/net6.0/Avalonia.Xaml.Interactivity.dll",
+        "lib/net6.0/Avalonia.Xaml.Interactivity.xml",
+        "lib/netstandard2.0/Avalonia.Xaml.Interactivity.dll",
+        "lib/netstandard2.0/Avalonia.Xaml.Interactivity.xml",
+        "lib/netstandard2.1/Avalonia.Xaml.Interactivity.dll",
+        "lib/netstandard2.1/Avalonia.Xaml.Interactivity.xml"
       ]
     },
     "Azure.Core/1.24.0": {
@@ -6243,6 +6278,7 @@
       "Avalonia.FuncUI >= 1.1.0",
       "Avalonia.ReactiveUI >= 11.0.2",
       "Avalonia.Themes.Fluent >= 11.0.2",
+      "Avalonia.Xaml.Interactivity >= 11.0.2",
       "BCrypt.Net-Next >= 4.0.3",
       "CustomMessageBox.Avalonia >= 11.0.0.2",
       "DialogHost.Avalonia >= 0.7.7",
@@ -6323,6 +6359,10 @@
             "version": "[11.0.2, )"
           },
           "Avalonia.Themes.Fluent": {
+            "target": "Package",
+            "version": "[11.0.2, )"
+          },
+          "Avalonia.Xaml.Interactivity": {
             "target": "Package",
             "version": "[11.0.2, )"
           },

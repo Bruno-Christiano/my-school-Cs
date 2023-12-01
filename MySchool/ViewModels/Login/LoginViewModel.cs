@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Input;
 using Avalonia;
@@ -50,6 +51,7 @@ public class LoginViewModel : ReactiveObject
             if (_auth.UserName != value)
             {
                 _auth.UserName = value;
+                //validação séra feito dinamica, quando o usuário digitar
                 ValidateForm("UserName");
                 this.RaisePropertyChanged(nameof(UserName));
             }
@@ -67,7 +69,7 @@ public class LoginViewModel : ReactiveObject
                 if (_auth.Password != value)
                 {
                     _auth.Password = value;
-                    /*ValidateForm("password");*/
+                    ValidateForm("Password");
                     this.RaisePropertyChanged(nameof(Password));
                 }
             }
@@ -86,55 +88,61 @@ public class LoginViewModel : ReactiveObject
 
     private void Login(Auth auth)
     {
-        /*// Validar o modelo User usando o validador
-        var userValidator = new LoginValidator();
-        var validationResult = userValidator.Validate(new Auth()
-            { UserName = auth.UserName, Password = auth.Password });*/
-        /*var loginValidator = new LoginValidator();
-        ValidationResult = loginValidator.Validate(auth);
+        
+     using var dbContext = new ApplicationDbContext();
+     var authService = new AuthService(dbContext);
 
-        // Verificar se a validação falhou'
-        if (!ValidationResult.IsValid)
+     string userName = auth.UserName;
+     string password = auth.Password;
+
+     var loginValidator = _loginValidator.Validate(new Auth { UserName = userName, Password = password });
+
+     if (loginValidator.IsValid)
+     {
+         if (authService.AuthenticateUser(userName, password))
+         {
+             GoToHomePage(auth);
+         }
+         else
+         {
+             ShowAuthenticationError();
+         }
+     }
+     else
+     {
+         ShowValidationErrors(loginValidator.Errors);
+     }
+     
+    }
+    private void ShowValidationErrors(IEnumerable<ValidationFailure> errors)
+    {
+        foreach (var failure in errors)
         {
-            // Manipular os erros de validação conforme necessário
-            foreach (var error in ValidationResult.Errors)
+            switch (failure.PropertyName)
             {
-                Debug.WriteLine($"Validation error: {error.ErrorMessage}");
-            }
-
-            return;
-        }*/
-
-
-        using var dbContext = new ApplicationDbContext();
-
-        {
-            var authService = new AuthService(dbContext);
-
-            string userName = auth.UserName;
-            string password = auth.Password;
-
-            if (authService.AuthenticateUser(userName, password))
-            {
-             
-                GoToHomePage(auth);
-            }
-            else
-            {
-                var messageBox = new MessageBox(
-                    "Usuário inválido",
-                    "Acesso negado", MessageBoxIcon.Error)
-                {
-                    HorizontalButtonsPanelAlignment = HorizontalAlignment.Center
-                };
-
-                var result = messageBox.Show(
-                    new MessageBoxButton<MessageBoxResult>("Fechar",
-                        MessageBoxResult.Yes, SpecialButtonRole.IsDefault));
+                case "UserName":
+                    UserNameError = failure.ErrorMessage;
+                    break;
+                case "Password":
+                    UserPasswordError = failure.ErrorMessage;
+                    break;
             }
         }
     }
 
+    private void ShowAuthenticationError()
+    {
+        var messageBox = new MessageBox(
+            "Usuário inválido",
+            "Acesso negado", MessageBoxIcon.Error)
+        {
+            HorizontalButtonsPanelAlignment = HorizontalAlignment.Center
+        };
+
+        var result = messageBox.Show(
+            new MessageBoxButton<MessageBoxResult>("Fechar",
+                MessageBoxResult.Yes, SpecialButtonRole.IsDefault));
+    }
 
     private static void CloseLogin()
     {
@@ -151,34 +159,50 @@ public class LoginViewModel : ReactiveObject
             this.RaisePropertyChanged(nameof(UserNameError));
         }
     }
-
-    public void ValidateForm(string? userName="UserName", string? password = "")
+    public string UserPasswordError
     {
-        
+        get => _auth.UserPasswordError;
+        set
+        {
+            _auth.UserPasswordError = value;
+            this.RaisePropertyChanged(nameof(UserPasswordError));
+        }
+    }
+
+    private void ValidateForm(string? fieldName = null)
+    {
+        var loginValidator = _loginValidator.Validate(new Auth { UserName = UserName, Password = Password });
         // a validação do form acontece por qque vai ser chamdado a qualquer momento.
+        switch (fieldName)
+        {
+            case "UserName":
+                UserNameError = string.Empty;
+                break;
+            case "Password":
+                UserPasswordError = string.Empty;
+                break;
+            default:
+                UserNameError = string.Empty;
+                UserPasswordError = string.Empty;
+                break;
+        }
         
-   var loginValidator = _loginValidator.Validate(new Auth { UserName = UserName, Password = Password });
-   UserNameError =string.Empty;
-   
+        
         if (!loginValidator.IsValid)
         {
             foreach (var failure in loginValidator.Errors)
             {
-
-                if (failure.PropertyName == userName)
+                switch (failure.PropertyName)
                 {
-                    Console.WriteLine(failure.ErrorMessage);
-                    UserNameError = failure.ErrorMessage;
+                    case "UserName" when fieldName == "UserName":
+                        UserNameError = failure.ErrorMessage;
+                        break;
+                    case "Password" when fieldName == "Password":
+                        UserPasswordError = failure.ErrorMessage;
+                        break;
                 }
-                if (failure.PropertyName == password)
-                {
-                    Console.WriteLine(failure.ErrorMessage);
-                    UserNameError = failure.ErrorMessage;
-                }
-                /*Console.WriteLine($"Property: {failure.PropertyName}, Error: {failure.ErrorMessage}");*/
             }
         }
-        
         
     }
 }
