@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Input;
 using Avalonia;
 using Avalonia.Controls;
@@ -18,6 +19,7 @@ using CustomMessageBox.Avalonia;
 using FluentValidation.Results;
 using MySchool.Models.User;
 using MySchool.Resources.Shared.Validators;
+using Color = Avalonia.Media.Color;
 
 
 namespace MySchool.ViewModels.Login;
@@ -29,18 +31,23 @@ public class LoginViewModel : ReactiveObject
     public Auth _auth;
     private LoginValidator _loginValidator;
     public ICommand LoginCommand { get; }
+
+    public static string _colorError = "#FF0000";
+
+    Color colorError = Color.Parse(_colorError);
     
+    private static string _colorDefault = "#000000";
+
+    Color colorDefault = Color.Parse(_colorDefault);
 
     public LoginViewModel()
     {
         _auth = new Auth();
         LoginCommand = new RelayCommand(() => Login(_auth));
         _loginValidator = new LoginValidator();
+        UserNameBorderError = new SolidColorBrush(colorDefault);
+        UserPasswordBorderError = new SolidColorBrush(colorDefault);
     }
-
-   
-
-    private string? _userName;
 
 
     public string UserName
@@ -57,8 +64,6 @@ public class LoginViewModel : ReactiveObject
             }
         }
     }
-
-    private string? _password;
 
     public string Password
     {
@@ -77,6 +82,48 @@ public class LoginViewModel : ReactiveObject
     }
 
 
+    public string UserNameError
+    {
+        get => _auth.UserNameError;
+        set
+        {
+            _auth.UserNameError = value;
+            this.RaisePropertyChanged(nameof(UserNameError));
+        }
+    }
+
+    public string UserPasswordError
+    {
+        get => _auth.UserPasswordError;
+        set
+        {
+            _auth.UserPasswordError = value;
+            this.RaisePropertyChanged(nameof(UserPasswordError));
+        }
+    }
+
+    private SolidColorBrush _userNameBorderError;
+    public SolidColorBrush UserNameBorderError
+    {
+        get => _userNameBorderError;
+        set
+        {
+            _userNameBorderError = value;
+            this.RaisePropertyChanged(nameof(UserNameBorderError));
+        }
+    }
+    
+    private SolidColorBrush _userPasswordBorderError;
+    public SolidColorBrush UserPasswordBorderError
+    {
+        get => _userPasswordBorderError;
+        set
+        {
+            _userPasswordBorderError = value;
+            this.RaisePropertyChanged(nameof(UserPasswordBorderError));
+        }
+    }
+
     private static void GoToHomePage(Auth auth)
     {
         var homeViewModel = new HomeViewModel.HomeViewModel
@@ -88,32 +135,33 @@ public class LoginViewModel : ReactiveObject
 
     private void Login(Auth auth)
     {
-        
-     using var dbContext = new ApplicationDbContext();
-     var authService = new AuthService(dbContext);
+        using var dbContext = new ApplicationDbContext();
+        var authService = new AuthService(dbContext);
 
-     string userName = auth.UserName;
-     string password = auth.Password;
+        string userName = auth.UserName;
+        string password = auth.Password;
 
-     var loginValidator = _loginValidator.Validate(new Auth { UserName = userName, Password = password });
+        var loginValidator = _loginValidator.Validate(new Auth
+            { UserName = userName, Password = password });
 
-     if (loginValidator.IsValid)
-     {
-         if (authService.AuthenticateUser(userName, password))
-         {
-             GoToHomePage(auth);
-         }
-         else
-         {
-             ShowAuthenticationError();
-         }
-     }
-     else
-     {
-         ShowValidationErrors(loginValidator.Errors);
-     }
-     
+        if (loginValidator.IsValid)
+        {
+            if (authService.AuthenticateUser(userName, password))
+            {
+                GoToHomePage(auth);
+            }
+            else
+            {
+                ShowAuthenticationError();
+            }
+        }
+        else
+        {
+            ShowValidationErrors(loginValidator.Errors);
+        }
     }
+
+
     private void ShowValidationErrors(IEnumerable<ValidationFailure> errors)
     {
         foreach (var failure in errors)
@@ -122,9 +170,11 @@ public class LoginViewModel : ReactiveObject
             {
                 case "UserName":
                     UserNameError = failure.ErrorMessage;
+                    UserNameBorderError = new SolidColorBrush(colorError);
                     break;
                 case "Password":
                     UserPasswordError = failure.ErrorMessage;
+                    UserPasswordBorderError = new SolidColorBrush(colorError);
                     break;
             }
         }
@@ -150,44 +200,29 @@ public class LoginViewModel : ReactiveObject
             IClassicDesktopStyleApplicationLifetime)?.MainWindow?.Close();
     }
 
-    public string UserNameError
-    {
-        get => _auth.UserNameError;
-        set
-        {
-            _auth.UserNameError = value;
-            this.RaisePropertyChanged(nameof(UserNameError));
-        }
-    }
-    public string UserPasswordError
-    {
-        get => _auth.UserPasswordError;
-        set
-        {
-            _auth.UserPasswordError = value;
-            this.RaisePropertyChanged(nameof(UserPasswordError));
-        }
-    }
 
     private void ValidateForm(string? fieldName = null)
     {
-        var loginValidator = _loginValidator.Validate(new Auth { UserName = UserName, Password = Password });
+        var loginValidator = _loginValidator.Validate(new Auth
+            { UserName = UserName, Password = Password });
         // a validação do form acontece por qque vai ser chamdado a qualquer momento.
         switch (fieldName)
         {
             case "UserName":
                 UserNameError = string.Empty;
+                UserNameBorderError = new SolidColorBrush(colorDefault);
                 break;
             case "Password":
                 UserPasswordError = string.Empty;
+                UserPasswordBorderError = new SolidColorBrush(colorDefault);
                 break;
             default:
                 UserNameError = string.Empty;
                 UserPasswordError = string.Empty;
                 break;
         }
-        
-        
+
+
         if (!loginValidator.IsValid)
         {
             foreach (var failure in loginValidator.Errors)
@@ -196,13 +231,15 @@ public class LoginViewModel : ReactiveObject
                 {
                     case "UserName" when fieldName == "UserName":
                         UserNameError = failure.ErrorMessage;
+                        UserNameBorderError = new SolidColorBrush(colorError);
                         break;
                     case "Password" when fieldName == "Password":
                         UserPasswordError = failure.ErrorMessage;
+                        UserPasswordBorderError =
+                            new SolidColorBrush(colorError);
                         break;
                 }
             }
         }
-        
     }
 }

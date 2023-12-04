@@ -41,15 +41,9 @@
                 <TextBox
                     Text="{Binding UserName}"
                     Watermark="Informe seu usuário"
+                    BorderBrush="{Binding UserNameBorderError}"
+                    
                     >
-                    <!--<TextBox.Styles>
-                        <Style Selector="TextBox" x:DataType="viewModelLogin:LoginViewModel">
-                            <Setter 
-                                Property="TextBox.BorderBrush" 
-                          
-                           />
-                        </Style>
-                    </TextBox.Styles>-->
                     
                 </TextBox>
                 <TextBlock Foreground="Red" Text="{Binding UserNameError}" ></TextBlock>
@@ -59,13 +53,10 @@
                     <TextBox
                         Text="{Binding Password}"
                         Watermark="Informe a senha"
-                        PasswordChar="*" />
-                   
-                    <!--<Button
-                            HorizontalAlignment="Right"
-                            Background="Transparent">
-                            <Image Name="EyeIcon" Source="../../Assets/eye.png" Width="16" Height="16" />
-                        </Button>-->
+                        PasswordChar="*" 
+                        BorderBrush="{Binding UserPasswordBorderError}"
+                        />
+                    
                     <TextBlock Foreground="Red" Text="{Binding UserPasswordError}" ></TextBlock>
                     <!--<Grid Margin="0 0 0 0">
                         
