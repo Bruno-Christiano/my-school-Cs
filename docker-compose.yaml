@@ -1,0 +1,17 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+  sqlServer:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    #user: root
+    restart: always
+    #volumes:
+    #- .dbdata/data:/var/opt/mssql/data
+    #- .dbdata/log:/var/opt/mssql/log
+    #- .dbdata/secrets:/var/opt/mssql/secrets
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: 'Senha!456'
+    ports:
+      - '1433:1433'
